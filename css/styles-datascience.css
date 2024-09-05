@@ -2,7 +2,7 @@
 html,
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 18px; /* Increased base font size */
+  font-size: 16px;
   color: #333;
   margin: 0;
   padding: 0;
@@ -19,16 +19,16 @@ header {
 }
 
 header h1 {
-  font-size: 2.6rem; /* Increased header font size */
+  font-size: 2.4rem;
   font-weight: 700;
   margin: 0;
 }
 
 /* Project Container Styling */
 .project-container {
-  display: flex; /* Use flexbox to align project boxes horizontally */
-  justify-content: space-between; /* Spread out the project boxes */
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Align projects centrally */
   padding: 40px 20px;
   gap: 20px;
 }
@@ -40,7 +40,8 @@ header h1 {
   background-color: #fff;
   border-radius: 12px;
   padding: 20px;
-  width: 30%; /* Limit width so that three project boxes fit in a row */
+  width: 100%;
+  max-width: 360px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
@@ -51,39 +52,36 @@ header h1 {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Specific Class for Image in Project Box */
-.project-image {
+.project-box img {
   width: 100%;
-  height: auto; /* Ensure the aspect ratio is maintained */
-  max-height: 150px; /* Limit the image height */
-  object-fit: contain; /* Ensure the image is fully visible without cropping */
-  border-radius: 8px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
   margin-bottom: 15px;
 }
 
 /* Project titles (h3) */
 .project-box h3 {
-  font-size: 1.8rem; /* Increased font size for project titles */
+  font-size: 1.4rem;
   color: #0072ff;
   margin-bottom: 12px;
   font-weight: 600;
-  text-align: center;
 }
 
 /* Timeframe, Tech Stack, and Description Styling */
 .project-timeframe,
 .project-techstack {
-  font-size: 1.2rem; /* Increased font size for timeframe and tech stack */
+  font-size: 1rem;
   color: #555;
   margin-bottom: 12px;
   text-align: left;
 }
 
 .project-description {
-  font-size: 1.3rem; /* Increased font size for description */
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.6;
   color: #444;
-  text-align: justify; /* Justify the content */
+  text-align: justify;
   margin-bottom: 18px;
 }
 
@@ -94,7 +92,7 @@ header h1 {
   padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
-  font-size: 1.1rem; /* Increased font size for the button text */
+  font-size: 1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-top: auto;
 }
@@ -105,29 +103,19 @@ header h1 {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .project-box {
-    width: 45%; /* Two project boxes per row on medium-sized screens */
-  }
-}
-
 @media (max-width: 768px) {
   header h1 {
-    font-size: 2.4rem;
-  }
-
-  .project-box {
-    width: 100%; /* One project box per row on smaller screens */
+    font-size: 2rem;
   }
 
   .project-box h3 {
-    font-size: 1.6rem; /* Reduced size for smaller screens */
+    font-size: 1.2rem;
   }
 
   .project-timeframe,
   .project-techstack,
   .project-description {
-    font-size: 1.1rem; /* Reduced size for smaller screens */
+    font-size: 0.9rem;
   }
 }
 
@@ -137,17 +125,17 @@ header h1 {
   }
 
   .project-box h3 {
-    font-size: 1.4rem; /* Further reduced for mobile screens */
+    font-size: 1.1rem;
   }
 
   .project-timeframe,
   .project-techstack,
   .project-description {
-    font-size: 1rem; /* Further reduced for mobile screens */
+    font-size: 0.9rem;
   }
 
   .project-box a {
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
