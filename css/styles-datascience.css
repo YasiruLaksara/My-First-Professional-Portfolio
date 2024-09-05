@@ -1,6 +1,8 @@
-/* General Styling */
+/* General Styling for Data Science */
+html,
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
   color: #333;
   margin: 0;
   padding: 0;
@@ -17,9 +19,9 @@ header {
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2.8em;
+  font-size: 2.4rem;
   font-weight: 700;
+  margin: 0;
 }
 
 /* Project Container Styling */
@@ -34,7 +36,7 @@ header h1 {
 /* Project Box Styling */
 .project-box {
   display: flex;
-  flex-direction: column; /* Ensures that children are stacked vertically */
+  flex-direction: column;
   background-color: #fff;
   border-radius: 12px;
   padding: 20px;
@@ -52,51 +54,47 @@ header h1 {
 
 .project-box img {
   width: 100%;
-  height: 200px; /* Fixed height */
-  object-fit: cover; /* Ensures the image covers the box without distortion */
+  height: 200px;
+  object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
 }
 
+/* Project titles (h3) */
 .project-box h3 {
-  font-size: 1.6em;
+  font-size: 1.4rem;
   color: #0072ff;
   margin-bottom: 12px;
   font-weight: 600;
 }
 
-/* New sections for Timeframe, Tech Stack, and Description */
+/* Timeframe, Tech Stack, and Description Styling */
 .project-timeframe,
 .project-techstack {
-  font-size: 1.1em;
+  font-size: 1rem;
+  color: #555;
   margin-bottom: 12px;
   text-align: left;
-  color: #555;
 }
 
 .project-description {
-  font-size: 1.1em;
-  line-height: 1.7;
-  margin-bottom: 18px;
-  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
   color: #444;
+  text-align: left;
+  margin-bottom: 18px;
 }
 
-/* Ensure the button stays at the bottom of the project box */
-.project-box-content {
-  flex: 1; /* Allows the content to grow and push the button to the bottom */
-}
-
+/* GitHub Link Styling */
 .project-box a {
-  display: inline-block;
   background-color: #0072ff;
   color: #fff;
   padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
-  font-size: 1.1em;
+  font-size: 1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: auto; /* Pushes the button to the bottom of the container */
+  margin-top: auto;
 }
 
 .project-box a:hover {
@@ -104,35 +102,40 @@ header h1 {
   transform: scale(1.05);
 }
 
-/* Additional Responsive Design Tweaks */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .project-box {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 480px) {
   header h1 {
-    font-size: 2.2em;
-  }
-
-  .project-box {
-    padding: 15px;
+    font-size: 2rem;
   }
 
   .project-box h3 {
-    font-size: 1.3em;
+    font-size: 1.2rem;
   }
 
   .project-timeframe,
   .project-techstack,
   .project-description {
-    font-size: 1em;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-box {
+    padding: 15px;
+  }
+
+  .project-box h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-timeframe,
+  .project-techstack,
+  .project-description {
+    font-size: 0.9rem;
   }
 
   .project-box a {
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 0.9rem;
   }
 }
