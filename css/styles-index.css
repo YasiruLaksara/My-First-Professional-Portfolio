@@ -110,3 +110,9 @@ body {
   font-size: 20px;
   color: #40514e;
 }
+
+header .specialization {
+  font-size: 1.3em; /* Slightly smaller than the subtitle */
+  color: #ffd700; /* Gold color to make it stand out */
+  margin: 5px 0; /* Add a little spacing */
+}
